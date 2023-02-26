@@ -3,6 +3,7 @@ H1 {
   padding: 0;
   text-align: center;
   color: red; /* Set the font color to red */
+  z-index: 3;
 }
 
 body
@@ -11,19 +12,41 @@ body
    padding: 0;
    
    /* make it look decent enough */
-   background: #232323;
-   color: #FFFFFF !important;
+   background: #FFFFFF;
+   color: #000 !important;
    font-family: "Avenir Next", "Avenir", sans-serif;
  }
  
+ .ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #252525;
+  border-bottom: 5px solid #4E3524;
+  transform-origin: 100% 0;
+  transform: translateX(0%) rotate(-0deg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  z-index: 2;
+}
+
+.right-link {
+  margin-left: 95%;
+
+  
+}
+
  #menuToggle
  {
    display: block;
-   position: relative;
-   top: -30px;
+   position: fixed;
+   top: 10px;
    left: 10px;
    
-   z-index: 1;
+   z-index: 3;
    
    -webkit-user-select: none;
    user-select: none;
@@ -129,11 +152,13 @@ body
  {
    position: absolute;
    width: 300px;
+   Height: 100vh;
    margin: -100px 0 0 -50px;
    padding: 50px;
    padding-top: 125px;
    
    background: #5A5A5A;
+   border-right: 5px solid #4E3524;
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
    /* to stop flickering of text in safari */
@@ -158,3 +183,41 @@ body
    transform: none;
  }
  
+ * {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://lh3.googleusercontent.com/wZ9-TsFbb695X2dd3xHneBS1g2Mt8daycU0biUWp9WgoEf6lFMuFc72KnBj_cS_foNg=w2400");
+
+  
+  height: 100%;
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#overlay {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
