@@ -190,7 +190,7 @@ body
 
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://lh3.googleusercontent.com/drive-viewer/AITFw-zMUdSWAJlCK9ggTW52HjLaHRw5_blP-R_zy4sRN9P5U302iTK2dGVxdwiusFMFaXvssZ7oacL7aJBStk2jp3F9Wg8bVw=s2560");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://drive.google.com/file/d/1lSHSlxK7lhsUJUiBg7vcIZqp9BGgn-GK/view?usp=sharing");
 
   
   height: 100%;
