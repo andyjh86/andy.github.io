@@ -22,7 +22,7 @@ body
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 100px;
   background-color: #252525;
   border-bottom: 5px solid #4E3524;
   transform-origin: 100% 0;
@@ -43,8 +43,8 @@ body
  {
    display: block;
    position: fixed;
-   top: 10px;
-   left: 10px;
+   top: 40px;
+   left: 20px;
    
    z-index: 3;
    
@@ -221,3 +221,14 @@ body
   position: absolute;
   top: 0;
 }
+
+.welcome {
+  text-align: Center
+
+}
+
+.welcome-text {
+  margin-left: 15px;
+}
+
+
