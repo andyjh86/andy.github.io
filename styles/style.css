@@ -1,0 +1,120 @@
+/********************************************
+FONTS STUFF - import Roboto from Google Fonts
+********************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap');
+
+
+/********************************************
+GLOBAL STYLES - this sets the background to black
+********************************************/
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/********************************************
+LAYOUT - SITE WRAPPER - so the site doesn't look too stretched on ultra-wide monitors
+********************************************/
+.site-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+
+/********************************************
+NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the screen
+********************************************/
+.navbar {
+    background-color: #333 !important;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+}
+
+.navbar .container-fluid {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ddd !important;
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+    border-color: white;
+    position: relative;
+    z-index: 1060;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e");
+}
+
+
+/********************************************
+   MEDIA QUERIES - RESPONSIVE DESIGN - this is what makes the page look nice on mobile devices
+********************************************/
+
+/* Mobile Navigation Menu */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 60%;
+        max-width: 300px;
+        background-color: #333;
+        padding: 2rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1050;
+        overflow-y: auto;
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        right: 0;
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
