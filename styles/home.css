@@ -3,143 +3,66 @@ HERO SECTION - this is for the hero image at the top of the page
 ********************************************/
 .hero {
     height: 70vh;
-    background-color: #0f172a;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200') center/cover no-repeat;
+    background-attachment: scroll;
     color: white;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero .container-fluid {
-    height: 100%;
-    padding: 0;
-    max-width: 1440px;
-    margin: 0 auto;
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero .row {
     margin: 0;
 }
 
-/* Left side - black background with text */
-.hero-text-side {
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 2rem;
-    height: 100%;
-}
-
-.hero-text {
-    text-align: left;
-    max-width: 600px;
-}
-
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
 }
 
-.hero-cta-btn {
-    margin-top: 1.5rem;
-    padding: 0.75rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: white;
-    background-color: #3b82f6;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.hero-cta-btn:hover {
-    background-color: #2563eb;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
-}
-
-.hero-cta-btn:active {
-    transform: translateY(0);
-}
-
-/* Right side - placeholder box */
-.hero-image-side {
-    padding: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1e293b;
-    overflow: hidden;
-}
-
-/* Hero image styling */
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Tablet and below - overlay text on image */
+/* Tablet adjustments */
 @media (max-width: 991px) {
-    .hero .row {
-        position: relative;
-    }
-    
-    .hero-text-side {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 40%, transparent 70%);
-        padding: 2rem;
-        display: flex;
-        align-items: flex-end;
-        padding-bottom: 4rem;
-    }
-    
-    .hero-image-side {
-        position: relative;
-        z-index: 1;
-        min-height: 70vh;
-    }
-    
-    .hero-image {
-        object-position: center 35%;
-    }
-    
-    .hero-text {
-        text-align: center;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-        padding: 1.5rem;
-        border-radius: 8px;
+    .hero {
+        height: 60vh;
+        min-height: 350px;
     }
     
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
 /* Mobile adjustments */
 @media (max-width: 576px) {
-    .hero-text {
-        padding: 1rem;
+    .hero {
+        height: 50vh;
+        min-height: 300px;
+        padding: 2rem 1rem;
     }
     
     .hero h1 {
         font-size: 1.75rem;
+        margin-bottom: 1rem;
     }
 
     .hero p {
@@ -151,118 +74,35 @@ HERO SECTION - this is for the hero image at the top of the page
 CONTENT SECTIONS
 ********************************************/
 .content-section {
-    padding: 0;
+    padding: 4rem 0;
+    background-color: #0f172a;
 }
 
 .content-section h2 {
     color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .content-section p {
     color: #ddd;
-}
-
-/* Intro text section - light grey background */
-.intro-section {
-    background-color: #f1f5f9;
-    padding: 3rem 0;
-}
-
-.intro-section h2 {
-    color: #333;
-}
-
-.intro-section p {
-    color: #666;
-}
-
-/* Cards section - black background */
-.cards-section {
-    background-color: #0f172a;
-    padding: 3rem 0;
-}
-
-/********************************************
-EXPERTISE CARDS SECTION
-********************************************/
-.expertise-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.expertise-card {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 8px;
-    padding: 2.5rem 2rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.expertise-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #3b82f6, #2563eb);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
-
-.expertise-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.expertise-card:hover::before {
-    transform: scaleX(1);
-}
-
-.expertise-card h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.8;
     margin-bottom: 1rem;
-    color: #333;
 }
 
-.expertise-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 0;
-}
-
-/* Tablet: 2 columns */
-@media (max-width: 991px) {
-    .expertise-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile: 1 column (stacked) */
+/* Mobile adjustments for content */
 @media (max-width: 576px) {
-    .expertise-cards {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .content-section {
+        padding: 2rem 0;
     }
     
-    .expertise-card {
-        padding: 2rem 1.5rem;
+    .content-section h2 {
+        font-size: 1.5rem;
     }
     
-    .expertise-card h2 {
-        font-size: 1.25rem;
-    }
-    
-    .expertise-card p {
-        font-size: 0.95rem;
+    .content-section p {
+        font-size: 1rem;
     }
 }
-
