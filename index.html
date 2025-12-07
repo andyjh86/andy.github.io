@@ -1,124 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
-
-<div class="ribbon">
-    <a href="#" class="right-link">Link</a>
-</div>
-
-<!--
-following is the beginning of the burger menu
--->
-
-  <nav role="navigation">
-      <div id="menuToggle">
-        <!--
-        Start with the burger menu as a hidden tick box
-        -->
-        <input type="checkbox" />
-        
-        <!--
-        spans to act as a hamburger.
-        -->
-          
-        <span></span>
-        <span></span>
-        <span></span>
-        
-        <!--
-        hidden by the checkbox selected.
-        -->
-          
-        <ul id="menu">
-          <a href="index.html"><li>Home</li></a>
-          <a href="#"><li>About Me</li></a>
-          <a href="seo.html"><li>SEO</li></a>
-          <a href="#"><li>Contact</li></a>
-          <a href="javascript.html"><li>JavaScript</li></a>
-          <a href="https://google.com" target="_blank"><li>Show me more</li></a>
-        </ul>
-      </div>
-    </nav>
-  
-<!-- 
-Next section is the hero image.
--->
-
-
 <body>
+    <div class="site-wrapper">
+        <!-- Sticky Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Andy Digital</a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
+        <!-- Hero Section with background image in HTML -->
+        <section class="hero" style="background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200') center/cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Andy custom site template</h1>
+                        <p>This is just a custom template I can build from</p> <br>
+			<p>It scales to device and has a collapseable burger menu that pops from the right</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>A digital body of work by Andy</h1>
-      <p>A personal blog to document and demonstrate my learning journey</p>
-      <br>
-      <button>First thing you need to do is click here</button>
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>About Us</h2>
+                        <p>Here's some example text. I understand most people would use something like Lorem ipsum but I always get a weird uncanny valley feeling from it. Instead I'd rather just ramble rubbish so that I know exactly what the text will look like. Is this a good idea? I'm really not sure, but at least it has the same effect while actually being readable.</p>
+                        <br>
+                        <h2>Here is a h2 tag</h2>
+                        <p>Typically this would be what ever content fits the category of the h2 heading. I fully appreciate h1 tags are the most important but if you're going to do something then you might as well do it right.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </div> 
-      
-<!-- Next section is the text -->
-  
-<div class="welcome">
-<b>Welcome to my Journey!</b><br>
-</div>
-<br>
-<div class="welcome-text">
 
-Hey there, I'm Andy, and I'm thrilled to welcome you to my little corner of the web! I created this site to demonstrate what I've learned in a place to put it into practice. This entire site is made up from both HTML & CSS I have manually written. It is split up into sections such as "SEO", "Project Management", Javascript<br>
-<br>
-Digital marketing should be logical. It should make sense to someone outside the industry. It's both disappointing and frustrating the industry is made up of "smoke & mirrors" as if it's more complex than it needs to be. The power of digital marketing comes from it's transparency and any digital marketer should be able to demonstrate value for money. <br>
-<br>
-
-To get started, click the button in the middle of the image. <br>
-<br>
-Once you've clicked the botton you can access the site contents via the burger menu in the top left corner of the screen. <br>
-<br>
-</div>
-    
-Thank you for being here, and I'm eager to explore the boundless horizons of web development and beyond with you!
-
-    
-    change <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test <br>
-    test
-  </body>
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!--this is only here as a backup in case my actual script doesn't load. Removing this will help load times-->
+    <script src="scripts/burger-menu.js"></script>
+</body>
+</html>
