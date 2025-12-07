@@ -31,8 +31,8 @@ const NAVBAR_CONFIG = {
     PLACEHOLDER_ID: 'navbar-placeholder',
     
     // URL to fetch the homepage from (root-relative)
-    // Use '/index.html' for domain root, or '/subfolder/index.html' if site is in a subfolder
-    HOMEPAGE_URL: '/index.html',
+    // Use './index.html' for relative path or '/index.html' if site is at domain root
+    HOMEPAGE_URL: '../index.html',
     
     // Whether to show a fallback navbar if fetch fails
     SHOW_FALLBACK: true,
@@ -154,7 +154,7 @@ function showFallbackNavbar(placeholder) {
     placeholder.innerHTML = `
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #1e293b; padding: 1rem;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/index.html" style="color: white; text-decoration: none; font-weight: bold;">
+                <a class="navbar-brand" href="../index.html" style="color: white; text-decoration: none; font-weight: bold;">
                     ${siteName}
                 </a>
                 <div style="color: #999; font-size: 0.9rem;">
@@ -173,11 +173,11 @@ function showFallbackNavbar(placeholder) {
  * 1. HOMEPAGE (index.html):
  *    - Include your navbar directly in the HTML
  *    - Use root-relative URLs (start with /) for all links
- *    - Include this script: <script src="/js/navbar.js"></script>
+ *    - Include this script: <script src="./scripts/navbar.js"></script>
  * 
  * 2. OTHER PAGES:
  *    - Add placeholder: <div id="navbar-placeholder"></div>
- *    - Include this script: <script src="/js/navbar.js"></script>
+ *    - Include this script: <script src="../scripts/navbar.js"></script>
  *    - Script will automatically load and inject the navbar
  * 
  * 3. LOCAL DEVELOPMENT:
