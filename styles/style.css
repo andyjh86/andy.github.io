@@ -10,6 +10,8 @@ GLOBAL STYLES - this sets the background to black
 body {
     background-color: black;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -22,6 +24,7 @@ LAYOUT - SITE WRAPPER - so the site doesn't look too stretched on ultra-wide mon
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: relative;
+    min-height: 100vh;
 }
 
 
@@ -35,15 +38,15 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
     left: 0;
     right: 0;
     z-index: 1040;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding-left: calc(50vw - 50%);
-    padding-right: calc(50vw - 50%);
+    width: 100%;
+    padding: 1rem 0;
 }
 
 .navbar .container-fluid {
     max-width: 1440px;
     margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .navbar-brand {
@@ -55,6 +58,7 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
 .nav-link {
     color: white !important;
     transition: color 0.3s;
+    padding: 0.5rem 1rem !important;
 }
 
 .nav-link:hover {
@@ -66,6 +70,7 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
     border-color: white;
     position: relative;
     z-index: 1060;
+    padding: 0.25rem 0.5rem;
 }
 
 .navbar-toggler-icon {
@@ -81,6 +86,15 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
 /********************************************
    MEDIA QUERIES - RESPONSIVE DESIGN - this is what makes the page look nice on mobile devices
 ********************************************/
+
+/* Desktop Navigation */
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+}
 
 /* Mobile Navigation Menu */
 @media (max-width: 991px) {
@@ -108,6 +122,7 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+        padding-top: 2rem;
     }
 
     .nav-item {
@@ -115,6 +130,7 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
     }
 
     .nav-link {
-        padding: 0.5rem 0;
+        padding: 0.5rem 0 !important;
+        display: block;
     }
 }
