@@ -15,7 +15,7 @@
  * CONFIGURATION:
  * - Change NAVBAR_SELECTOR if your navbar uses a different element/class
  * - Change PLACEHOLDER_ID if you want a different placeholder ID
- * - Change HOMEPAGE_URL if your site is in a subdirectory
+ * - Change HOMEPAGE_URL to match your GitHub Pages URL
  */
 
 // ============================================================================
@@ -30,9 +30,9 @@ const NAVBAR_CONFIG = {
     // ID of the placeholder div on other pages
     PLACEHOLDER_ID: 'navbar-placeholder',
     
-    // URL to fetch the homepage from (root-relative)
-    // Use './index.html' for relative path or '/index.html' if site is at domain root
-    HOMEPAGE_URL: '../index.html',
+    // URL to fetch the homepage from
+    // For GitHub Pages project sites, use the full path including repository name
+    HOMEPAGE_URL: '/andy.github.io/index.html',
     
     // Whether to show a fallback navbar if fetch fails
     SHOW_FALLBACK: true,
@@ -154,7 +154,7 @@ function showFallbackNavbar(placeholder) {
     placeholder.innerHTML = `
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #1e293b; padding: 1rem;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html" style="color: white; text-decoration: none; font-weight: bold;">
+                <a class="navbar-brand" href="/andy.github.io/index.html" style="color: white; text-decoration: none; font-weight: bold;">
                     ${siteName}
                 </a>
                 <div style="color: #999; font-size: 0.9rem;">
@@ -172,7 +172,7 @@ function showFallbackNavbar(placeholder) {
  * 
  * 1. HOMEPAGE (index.html):
  *    - Include your navbar directly in the HTML
- *    - Use root-relative URLs (start with /) for all links
+ *    - Use absolute URLs starting with /repository-name/ for all links
  *    - Include this script: <script src="./scripts/navbar.js"></script>
  * 
  * 2. OTHER PAGES:
@@ -187,7 +187,7 @@ function showFallbackNavbar(placeholder) {
  * 4. CUSTOMIZATION:
  *    - Edit NAVBAR_CONFIG at the top of this file
  *    - Change NAVBAR_SELECTOR if your navbar uses different markup
- *    - Change HOMEPAGE_URL if your site is in a subdirectory
+ *    - Change HOMEPAGE_URL to match your GitHub Pages path
  * 
  * 5. FRAMEWORK COMPATIBILITY:
  *    - Automatically detects and reinitializes: Bootstrap 5, Foundation, Materialize
