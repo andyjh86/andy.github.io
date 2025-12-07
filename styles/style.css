@@ -5,6 +5,25 @@ FONTS STUFF - import Roboto from Google Fonts
 
 
 /********************************************
+COLOR SCHEME - Define all colors in one place
+********************************************/
+:root {
+    --color-primary-dark: #0f172a;      /* Main dark blue background */
+    --color-secondary-dark: #1e293b;    /* Slightly lighter dark blue */
+    --color-accent-blue: #3498db;       /* Bright blue accent */
+    --color-accent-dark-blue: #2980b9;  /* Darker blue accent */
+    --color-navy: #2c3e50;              /* Navy blue */
+    --color-navbar-bg: #333;            /* Navbar background */
+    --color-text-light: #ddd;           /* Light text on dark backgrounds */
+    --color-text-dark: #333;            /* Dark text on light backgrounds */
+    --color-text-muted: #555;           /* Muted text */
+    --color-text-gray: #666;            /* Gray text */
+    --color-white: #fff;
+    --color-light-bg: #f8f9fa;          /* Light background for sections */
+}
+
+
+/********************************************
 GLOBAL STYLES - this sets the background to black
 ********************************************/
 body {
@@ -12,6 +31,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--color-text-dark);
 }
 
 
@@ -21,7 +41,7 @@ LAYOUT - SITE WRAPPER - so the site doesn't look too stretched on ultra-wide mon
 .site-wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--color-white);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: relative;
     min-height: 100vh;
@@ -32,7 +52,7 @@ LAYOUT - SITE WRAPPER - so the site doesn't look too stretched on ultra-wide mon
 NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the screen
 ********************************************/
 .navbar {
-    background-color: #333 !important;
+    background-color: var(--color-navbar-bg) !important;
     position: sticky;
     top: 0;
     left: 0;
@@ -52,22 +72,22 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white !important;
+    color: var(--color-white) !important;
 }
 
 .nav-link {
-    color: white !important;
+    color: var(--color-white) !important;
     transition: color 0.3s;
     padding: 0.5rem 1rem !important;
 }
 
 .nav-link:hover {
-    color: #ddd !important;
+    color: var(--color-text-light) !important;
 }
 
 /* Navbar Toggle Button */
 .navbar-toggler {
-    border-color: white;
+    border-color: var(--color-white);
     position: relative;
     z-index: 1060;
     padding: 0.25rem 0.5rem;
@@ -80,6 +100,29 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e");
+}
+
+
+/********************************************
+CONTENT SECTIONS - Common styles for content areas
+********************************************/
+.content-section {
+    padding: 4rem 0;
+    background-color: var(--color-primary-dark);
+}
+
+.content-section h2 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.content-section p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
 }
 
 
@@ -105,7 +148,7 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
         height: 100vh;
         width: 60%;
         max-width: 300px;
-        background-color: #333;
+        background-color: var(--color-navbar-bg);
         padding: 2rem;
         transition: right 0.3s ease-in-out;
         z-index: 1050;
@@ -132,5 +175,20 @@ NAVIGATION - NAVBAR - this section covers the navigation bar at the top of the s
     .nav-link {
         padding: 0.5rem 0 !important;
         display: block;
+    }
+}
+
+/* Mobile adjustments for content */
+@media (max-width: 576px) {
+    .content-section {
+        padding: 2rem 0;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-section p {
+        font-size: 1rem;
     }
 }
