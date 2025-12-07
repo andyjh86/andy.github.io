@@ -1,0 +1,116 @@
+/********************************************
+HERO SECTION - About page with different background
+********************************************/
+.hero {
+    height: 70vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200') center/cover no-repeat;
+    background-attachment: scroll;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero .row {
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+/* Tablet adjustments */
+@media (max-width: 991px) {
+    .hero {
+        height: 60vh;
+        min-height: 350px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .hero {
+        height: 50vh;
+        min-height: 300px;
+        padding: 2rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+}
+
+/********************************************
+CONTENT SECTIONS
+********************************************/
+.content-section {
+    padding: 4rem 0;
+    background-color: #0f172a;
+}
+
+.content-section h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.content-section p {
+    color: #ddd;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.content-section ul {
+    color: #ddd;
+}
+
+.content-section ul li {
+    line-height: 1.8;
+}
+
+/* Mobile adjustments for content */
+@media (max-width: 576px) {
+    .content-section {
+        padding: 2rem 0;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-section p {
+        font-size: 1rem;
+    }
+}
